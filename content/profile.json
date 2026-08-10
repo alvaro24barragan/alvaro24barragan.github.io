@@ -1,0 +1,179 @@
+{
+  "profile": {
+    "name": "Álvaro Barragán Codesal",
+    "role": "AI & Data Professional",
+    "location": "Madrid, Spain",
+    "positioning": "AI & Data Consultant · Madrid, Spain",
+    "summary": "Early-career AI and Data professional with hands-on experience in Python, Machine Learning, NLP, LLMs, RAG systems and process automation. I build practical solutions that connect technical depth with real business needs.",
+    "email": "alvaro24barragan@gmail.com",
+    "linkedin": "https://linkedin.com/in/barragan-alvaro",
+    "github": "https://github.com/alvaro24barragan"
+  },
+  "highlights": [
+    { "value": "3", "label": "Professional experiences" },
+    { "value": "2", "label": "University degrees" },
+    { "value": "26", "label": "Verified courses" },
+    { "value": "C1", "label": "English level" }
+  ],
+  "currentFocus": [
+    {
+      "status": "In progress",
+      "title": "AWS Certified AI Practitioner",
+      "description": "Establishing a verified AWS foundation for AI engineering before progressing to the AWS Certified Machine Learning Engineer - Associate certification.",
+      "link": "https://aws.amazon.com/certification/certified-ai-practitioner/",
+      "linkLabel": "Certification details"
+    },
+    {
+      "status": "Next",
+      "title": "AWS Certified Machine Learning Engineer - Associate",
+      "description": "Planned after the AI Practitioner, with a focus on implementing and operationalising production ML workloads on AWS.",
+      "link": "https://aws.amazon.com/certification/certified-machine-learning-engineer-associate/",
+      "linkLabel": "Certification details"
+    },
+    {
+      "status": "Active project",
+      "title": "Language Tutor",
+      "description": "Current personal project focused on developing a digital language tutor. More technical details will be added as the project progresses."
+    }
+  ],
+  "experience": [
+    {
+      "company": "NFQ Advisory, Solutions, Outsourcing",
+      "role": "Data Consultant",
+      "location": "Madrid, Spain",
+      "period": "Jan 2026 - Present",
+      "summary": "AI/Data consulting, process automation and business-oriented technology delivery.",
+      "details": [
+        "Designed AI-based solutions to automate internal processes using documentation, business rules and process analysis.",
+        "Developed LLM/RAG assistants for corporate knowledge retrieval and reduction of manual tasks.",
+        "Automated the generation of testing artifacts and XML structures to improve functional validation workflows.",
+        "Worked across functional analysis, technical documentation, automation and applied AI/Data solutions."
+      ],
+      "skills": ["Python", "Generative AI", "LLMs", "RAG", "Automation", "XML"]
+    },
+    {
+      "company": "SEGULA Technologies",
+      "role": "AI & Data Science Intern",
+      "location": "Madrid, Spain",
+      "period": "Apr 2025 - May 2025",
+      "summary": "Document analysis, AI agents, unstructured information processing and automation use cases.",
+      "details": [
+        "Developed AI agents with Microsoft Copilot to automate document analysis and information generation.",
+        "Applied NLP and LLM techniques to extract, classify and structure unstructured data.",
+        "Identified and analysed AI use cases focused on operational efficiency, automation and data processing."
+      ],
+      "skills": ["Microsoft Copilot", "AI agents", "NLP", "LLMs", "Information extraction"]
+    },
+    {
+      "company": "Inetum Spain",
+      "role": "AI Engineering Intern",
+      "location": "Madrid, Spain",
+      "period": "Oct 2023 - Jan 2024",
+      "summary": "RAG-based virtual assistant architecture and data processing workflows in an AI and Advanced Analytics team.",
+      "details": [
+        "Designed the architecture of a RAG-based virtual assistant to improve contextual retrieval and response accuracy.",
+        "Worked with Azure OpenAI in an internal Generative AI project.",
+        "Implemented information retrieval and processing mechanisms over relational databases.",
+        "Developed ETL pipelines with Python and PySpark for data ingestion, transformation and validation."
+      ],
+      "skills": ["Azure OpenAI", "Python", "PySpark", "RAG", "SQL", "ETL"]
+    }
+  ],
+  "education": [
+    {
+      "institution": "Universidad Alfonso X El Sabio",
+      "degree": "Master's Degree in Artificial Intelligence",
+      "period": "Sep 2024 - Sep 2025",
+      "location": "Madrid, Spain",
+      "summary": "Machine Learning, Deep Learning, NLP, Time Series and Recommendation Systems.",
+      "thesis": "AI-based recommendation system for personalised hypertrophy training."
+    },
+    {
+      "institution": "Universidad de Alcalá",
+      "degree": "Bachelor's Degree in Computer Engineering",
+      "period": "Sep 2019 - Jun 2025",
+      "location": "Madrid, Spain",
+      "summary": "Algorithms, Statistics, Databases, Artificial Intelligence, Data Science and Computer Vision.",
+      "thesis": "CRAN package for statistical automation and advanced basketball analytics.",
+      "link": "https://github.com/alvaro24barragan/AdvancedBasketballStats"
+    }
+  ],
+  "projects": [
+    {
+      "title": "RAG Document Assistant",
+      "context": "Inetum - Internal project",
+      "description": "Architecture design for a RAG-based virtual assistant combining Azure OpenAI, relational data retrieval and contextual response generation.",
+      "skills": ["Azure OpenAI", "RAG", "LLMs", "Python", "SQL"],
+      "note": "The code is confidential; the architecture, technical approach and learnings can be discussed."
+    },
+    {
+      "title": "Personalised Hypertrophy Training",
+      "context": "Master's thesis",
+      "description": "AI-based recommendation system designed to personalise hypertrophy training using user and training data.",
+      "skills": ["Machine Learning", "Recommendation systems", "Personalisation", "Data analysis"]
+    },
+    {
+      "title": "AdvancedBasketballStats",
+      "context": "Bachelor's thesis",
+      "description": "Development and extension of a CRAN package for statistical automation, advanced analytics and basketball data analysis.",
+      "skills": ["R", "Statistics", "CRAN", "Automation", "Data visualisation"],
+      "link": "https://github.com/alvaro24barragan/AdvancedBasketballStats"
+    },
+    {
+      "title": "Mathematical Modelling Competitions",
+      "context": "Instituto de Matemática Interdisciplinar · UCM",
+      "description": "Two reports from the IV and V editions: network design using graph theory and minimum spanning trees, followed by an analysis of fairness in the UEFA Champions League draw using probability, Machine Learning and optimisation.",
+      "skills": ["Graph theory", "Minimum Spanning Trees", "Probability", "Machine Learning", "Optimisation"],
+      "link": "https://github.com/alvaro24barragan/cmm-mathematical-modelling-competition",
+      "reports": [
+        {
+          "label": "IV Edition · Network optimisation",
+          "url": "https://github.com/alvaro24barragan/cmm-mathematical-modelling-competition/blob/main/CMM_IMI_2021_report.pdf"
+        },
+        {
+          "label": "V Edition · UEFA draw fairness",
+          "url": "https://github.com/alvaro24barragan/cmm-mathematical-modelling-competition/blob/main/CMM_IMI_2022_report.pdf"
+        }
+      ]
+    }
+  ],
+  "skillGroups": [
+    { "title": "Programming & Data", "items": ["Python", "SQL", "PySpark", "Pandas", "NumPy", "R"] },
+    { "title": "AI & Machine Learning", "items": ["Machine Learning", "Deep Learning", "NLP", "LLMs", "RAG", "AI agents", "Recommendation systems", "Time series"] },
+    { "title": "Frameworks & Tools", "items": ["scikit-learn", "PyTorch", "LangChain", "LangGraph", "Hugging Face", "MLflow", "Git", "Microsoft Copilot"] },
+    { "title": "Cloud & Delivery", "items": ["Azure OpenAI", "AWS fundamentals", "ETL pipelines", "APIs", "Model evaluation", "Process automation"] }
+  ],
+  "languages": [
+    { "language": "Spanish", "level": "Native" },
+    { "language": "English", "level": "C1" },
+    { "language": "German", "level": "A2" }
+  ],
+  "courses": [
+    { "title": "Fundamentals of Machine Learning and Artificial Intelligence", "provider": "AWS Training & Certification", "date": "Jul 30, 2026", "category": "AI foundations", "certificate": "/certificates/aws-fundamentals-ml-ai.pdf", "featured": true },
+    { "title": "Introduction to MLflow", "provider": "DataCamp", "date": "Oct 15, 2025", "duration": "4 hrs", "category": "ML & MLOps", "certificate": "/certificates/introduction-to-mlflow.pdf", "featured": true },
+    { "title": "Monitoring Machine Learning Concepts", "provider": "DataCamp", "date": "Oct 16, 2025", "duration": "2 hrs", "category": "ML & MLOps", "certificate": "/certificates/monitoring-machine-learning-concepts.pdf" },
+    { "title": "MLOps Concepts", "provider": "DataCamp", "date": "Oct 11, 2025", "duration": "2 hrs", "category": "ML & MLOps", "certificate": "/certificates/mlops-concepts.pdf" },
+    { "title": "Designing Agentic Systems with LangChain", "provider": "DataCamp", "date": "Feb 23, 2025", "duration": "3 hrs", "category": "GenAI & deep learning", "certificate": "/certificates/designing-agentic-systems-with-langchain.pdf", "featured": true },
+    { "title": "Transformer Models with PyTorch", "provider": "DataCamp", "date": "Feb 23, 2025", "duration": "2 hrs", "category": "GenAI & deep learning", "certificate": "/certificates/transformer-models-with-pytorch.pdf", "featured": true },
+    { "title": "Introduction to Deep Learning with PyTorch", "provider": "DataCamp", "date": "Feb 23, 2025", "duration": "4 hrs", "category": "GenAI & deep learning", "certificate": "/certificates/introduction-to-deep-learning-with-pytorch.pdf" },
+    { "title": "Developing LLM Applications with LangChain", "provider": "DataCamp", "date": "Feb 22, 2025", "duration": "3 hrs", "category": "GenAI & deep learning", "certificate": "/certificates/developing-llm-applications-with-langchain.pdf", "featured": true },
+    { "title": "Introduction to ChatGPT", "provider": "DataCamp", "date": "Feb 19, 2025", "duration": "1 hr", "category": "GenAI & deep learning", "certificate": "/certificates/introduction-to-chatgpt.pdf" },
+    { "title": "Python Fundamentals", "provider": "DataCamp", "date": "Aug 16, 2023", "duration": "15 hrs", "category": "Python & data", "certificate": "/certificates/python-fundamentals.pdf" },
+    { "title": "Intermediate Data Visualization with Seaborn", "provider": "DataCamp", "date": "Aug 14, 2023", "duration": "4 hrs", "category": "Python & data", "certificate": "/certificates/intermediate-data-visualization-with-seaborn.pdf" },
+    { "title": "Python Data Science Toolbox (Part 2)", "provider": "DataCamp", "date": "Aug 10, 2023", "duration": "4 hrs", "category": "Python & data", "certificate": "/certificates/python-data-science-toolbox-part-2.pdf" },
+    { "title": "Introduction to Data Visualization with Seaborn", "provider": "DataCamp", "date": "Aug 9, 2023", "duration": "4 hrs", "category": "Python & data", "certificate": "/certificates/introduction-to-data-visualization-with-seaborn.pdf" },
+    { "title": "Python Data Science Toolbox (Part 1)", "provider": "DataCamp", "date": "Aug 9, 2023", "duration": "3 hrs", "category": "Python & data", "certificate": "/certificates/python-data-science-toolbox-part-1.pdf" },
+    { "title": "Introduction to Data Visualization with Matplotlib", "provider": "DataCamp", "date": "Aug 7, 2023", "duration": "4 hrs", "category": "Python & data", "certificate": "/certificates/introduction-to-data-visualization-with-matplotlib.pdf" },
+    { "title": "Introduction to Statistics in Python", "provider": "DataCamp", "date": "Aug 5, 2023", "duration": "4 hrs", "category": "Python & data", "certificate": "/certificates/introduction-to-statistics-in-python.pdf" },
+    { "title": "Joining Data with pandas", "provider": "DataCamp", "date": "Jun 16, 2023", "duration": "4 hrs", "category": "Python & data", "certificate": "/certificates/joining-data-with-pandas.pdf" },
+    { "title": "Data Manipulation with pandas", "provider": "DataCamp", "date": "Jun 14, 2023", "duration": "4 hrs", "category": "Python & data", "certificate": "/certificates/data-manipulation-with-pandas.pdf" },
+    { "title": "Intermediate Python", "provider": "DataCamp", "date": "Jun 12, 2023", "duration": "4 hrs", "category": "Python & data", "certificate": "/certificates/intermediate-python.pdf" },
+    { "title": "Machine Learning Fundamentals with Python", "provider": "DataCamp", "date": "Jun 9, 2023", "duration": "16 hrs", "category": "ML & MLOps", "certificate": "/certificates/machine-learning-fundamentals-with-python.pdf" },
+    { "title": "Introduction to Deep Learning in Python", "provider": "DataCamp", "date": "Jun 9, 2023", "duration": "4 hrs", "category": "ML & MLOps", "certificate": "/certificates/introduction-to-deep-learning-in-python.pdf" },
+    { "title": "Linear Classifiers in Python", "provider": "DataCamp", "date": "Jun 7, 2023", "duration": "4 hrs", "category": "ML & MLOps", "certificate": "/certificates/linear-classifiers-in-python.pdf" },
+    { "title": "Unsupervised Learning in Python", "provider": "DataCamp", "date": "Jun 5, 2023", "duration": "4 hrs", "category": "ML & MLOps", "certificate": "/certificates/unsupervised-learning-in-python.pdf" },
+    { "title": "Supervised Learning with scikit-learn", "provider": "DataCamp", "date": "Jun 3, 2023", "duration": "4 hrs", "category": "ML & MLOps", "certificate": "/certificates/supervised-learning-with-scikit-learn.pdf" },
+    { "title": "Introduction to Python", "provider": "DataCamp", "date": "Jun 3, 2023", "duration": "4 hrs", "category": "Python & data", "certificate": "/certificates/introduction-to-python.pdf" },
+    { "title": "Elements of AI", "provider": "University of Helsinki & MinnaLearn", "date": "Jun 1, 2023", "duration": "2 ECTS", "category": "AI foundations", "certificate": "/certificates/elements-of-ai.png", "featured": true }
+  ]
+}
