@@ -323,7 +323,9 @@ a:focus-visible, button:focus-visible { outline: 3px solid #d98a62; outline-offs
 
 .focus-card p { margin: 0; color: var(--muted); }
 .focus-card a { margin-top: auto; padding-top: 24px; color: var(--forest); font-weight: 750; }
-.focus-card .tag-row { margin-top: auto; padding-top: 24px; }
+.focus-competencies { margin-top: auto; padding-top: 24px; }
+.focus-card .focus-competency-label { color: var(--forest); font-size: 0.72rem; font-weight: 800; letter-spacing: 0.06em; text-transform: uppercase; }
+.focus-card .focus-competencies .tag-row { margin-top: 10px; padding-top: 0; }
 
 .education-section {
   padding-block: 72px;

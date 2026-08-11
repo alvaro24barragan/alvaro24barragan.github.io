@@ -1,6 +1,6 @@
 import type { MetadataRoute } from "next";
 
-const siteUrl = "https://alvaro24barragan.github.io/profile-preview-a7/";
+const siteUrl = "https://alvaro24barragan.github.io/";
 
 export const dynamic = "force-static";
 

@@ -1,13 +1,13 @@
 import type { Metadata } from "next";
 import "./globals.css";
 
-const siteUrl = "https://alvaro24barragan.github.io/profile-preview-a7/";
+const siteUrl = "https://alvaro24barragan.github.io/";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: "Álvaro Barragán Codesal | AI & Data Portfolio",
   description:
-    "AI and Data professional focused on Machine Learning, LLMs, RAG systems, automation and business-oriented data solutions.",
+    "Personal portfolio — AI & Data experience, projects, education and continuous learning.",
   applicationName: "Álvaro Barragán Codesal | AI & Data Portfolio",
   authors: [{ name: "Álvaro Barragán Codesal", url: siteUrl }],
   creator: "Álvaro Barragán Codesal",
@@ -41,10 +41,10 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Álvaro Barragán Codesal | AI & Data Portfolio",
     description:
-      "Experience, projects, education and verified continuous learning in AI and Data.",
-    url: "https://alvaro24barragan.github.io/profile-preview-a7/",
+      "Personal portfolio — AI & Data experience, projects, education and continuous learning.",
+    url: siteUrl,
     siteName: "Álvaro Barragán Codesal",
-    images: [{ url: "/profile-preview-a7/og.png", width: 1792, height: 896 }],
+    images: [{ url: "/og.png", width: 1792, height: 896 }],
     locale: "en_US",
     alternateLocale: ["es_ES", "de_DE"],
     type: "website",
@@ -53,7 +53,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Álvaro Barragán Codesal | AI & Data Portfolio",
     description: "AI & Data portfolio: Python, Machine Learning, LLMs and RAG.",
-    images: ["/profile-preview-a7/og.png"],
+    images: ["/og.png"],
   },
 };
 

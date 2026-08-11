@@ -141,7 +141,12 @@ export default function Portfolio() {
                 <span className="focus-status">{t(item.status)}</span>
                 <h3>{t(item.title)}</h3>
                 <p>{t(item.description)}</p>
-                {item.skills.length > 0 && <div className="tag-row">{item.skills.map((skill) => <span key={skill}>{skill}</span>)}</div>}
+                {item.skills.length > 0 && (
+                  <div className="focus-competencies">
+                    {"competencyLabel" in item && item.competencyLabel && <p className="focus-competency-label">{t(item.competencyLabel)}</p>}
+                    <div className="tag-row">{item.skills.map((skill) => <span key={skill}>{skill}</span>)}</div>
+                  </div>
+                )}
               </article>
             ))}
           </div>
