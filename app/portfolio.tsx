@@ -1,7 +1,8 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import data from "@/content/profile.json";
+import { languageOptions, translateContent, ui, type Language } from "@/app/i18n";
 
 const courseCategories = [
   "GenAI & deep learning",
@@ -10,11 +11,31 @@ const courseCategories = [
   "AI foundations",
 ];
 
+const featuredCourseOrder = [
+  "Designing Agentic Systems with LangChain",
+  "Developing LLM Applications with LangChain",
+  "Transformer Models with PyTorch",
+  "Introduction to MLflow",
+  "Monitoring Machine Learning Concepts",
+  "MLOps Concepts",
+];
+
+const featuredCourses = data.courses
+  .filter((course) => course.featured)
+  .sort((first, second) => featuredCourseOrder.indexOf(first.title) - featuredCourseOrder.indexOf(second.title));
+
 const basePath = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
 const publicAsset = (path: string) => `${basePath}${path}`;
 
 export default function Portfolio() {
   const [educationOpen, setEducationOpen] = useState(false);
+  const [language, setLanguage] = useState<Language>("en");
+  const copy = ui[language];
+  const t = (value: string) => translateContent(language, value);
+
+  useEffect(() => {
+    document.documentElement.lang = language;
+  }, [language]);
 
   const openEducation = () => {
     setEducationOpen(true);
@@ -26,71 +47,82 @@ export default function Portfolio() {
   return (
     <div className="site-shell">
       <header className="site-header">
-        <a className="brand" href="#top" aria-label="Go to the top">
+        <a className="brand" href="#top" aria-label={copy.goToTop}>
           <span className="brand-mark">AB</span>
-          <span>{data.profile.name}</span>
         </a>
-        <nav aria-label="Main navigation">
-          <a href="#experience">Experience</a>
-          <a href="#current-focus">Current focus</a>
-          <button type="button" onClick={openEducation}>Education</button>
-          <a href="#projects">Projects</a>
-          <a className="nav-cta" href={`mailto:${data.profile.email}`}>Contact</a>
+        <nav aria-label={copy.mainNavigation}>
+          <a href="#experience">{copy.experience}</a>
+          <a href="#current-focus">{copy.currentFocus}</a>
+          <button type="button" onClick={openEducation}>{copy.education}</button>
+          <a href="#projects">{copy.projects}</a>
+          <div className="language-switcher" role="group" aria-label={copy.languageSelector}>
+            {languageOptions.map((option) => (
+              <button
+                className={`language-option ${language === option.code ? "is-active" : ""}`}
+                type="button"
+                aria-pressed={language === option.code}
+                onClick={() => setLanguage(option.code)}
+                key={option.code}
+              >
+                {option.label}
+              </button>
+            ))}
+          </div>
+          <a className="nav-cta" href={`mailto:${data.profile.email}`}>{copy.contact}</a>
         </nav>
       </header>
 
       <main id="top">
         <section className="hero page-width">
           <div className="hero-copy">
-            <p className="eyebrow">{data.profile.positioning}</p>
+            <p className="eyebrow">{t(data.profile.positioning)}</p>
             <h1>{data.profile.name}</h1>
-            <p className="hero-summary">{data.profile.summary}</p>
+            <p className="hero-summary">{t(data.profile.summary)}</p>
             <div className="hero-actions">
-              <a className="button button-primary" href="#experience">Explore my profile <span aria-hidden="true">↓</span></a>
-              <a className="button button-secondary" href={`mailto:${data.profile.email}`}>Get in touch <span aria-hidden="true">↗</span></a>
+              <a className="button button-primary" href="#experience">{copy.exploreProfile} <span aria-hidden="true">↓</span></a>
+              <a className="button button-secondary" href={`mailto:${data.profile.email}`}>{copy.getInTouch} <span aria-hidden="true">↗</span></a>
             </div>
           </div>
-          <aside className="hero-brief" aria-label="Professional summary">
-            <div className="brief-topline"><span>Current profile</span><span className="status-dot">Applied AI</span></div>
-            <h2>{data.profile.role}</h2>
+          <aside className="hero-brief" aria-label={copy.professionalSummary}>
+            <h2>{copy.currentProfile}</h2>
             <dl>
-              <div><dt>Based in</dt><dd>{data.profile.location}</dd></div>
-              <div><dt>Current role</dt><dd>Data Consultant · NFQ</dd></div>
-              <div><dt>Core focus</dt><dd>LLMs · RAG · ML · Automation</dd></div>
-              <div><dt>Languages</dt><dd>ES Native · EN C1 · DE A2</dd></div>
+              <div><dt>{copy.basedIn}</dt><dd>{t(data.profile.location)}</dd></div>
+              <div><dt>{copy.currentRole}</dt><dd>{t("Data Consultant")} · NFQ</dd></div>
+              <div><dt>{copy.coreFocus}</dt><dd>LLMs · RAG · ML · {t("Automation")}</dd></div>
+              <div><dt>{copy.languages}</dt><dd>ES {t("Native")} · EN C1 · DE A2</dd></div>
             </dl>
           </aside>
         </section>
 
-        <section className="highlights page-width" aria-label="Profile highlights">
+        <section className="highlights page-width" aria-label={copy.profileHighlights}>
           {data.highlights.map((item) => (
             <div className="highlight" key={item.label}>
               <strong>{item.value}</strong>
-              <span>{item.label}</span>
+              <span>{t(item.label)}</span>
             </div>
           ))}
         </section>
 
         <section id="experience" className="section page-width">
           <div className="section-heading">
-            <div><p className="section-number">01</p><h2>Experience</h2></div>
-            <p>Professional experience across AI consulting, document intelligence, retrieval systems and data workflows.</p>
+            <div><p className="section-number">01</p><h2>{copy.experience}</h2></div>
+            <p>{copy.experienceDescription}</p>
           </div>
           <div className="experience-list">
             {data.experience.map((job) => (
               <article className="experience-item" key={`${job.company}-${job.period}`}>
                 <div className="experience-meta">
                   <p>{job.company}</p>
-                  <span>{job.location}</span>
-                  <time>{job.period}</time>
+                  <span>{t(job.location)}</span>
+                  <time>{t(job.period)}</time>
                 </div>
                 <div className="experience-copy">
-                  <h3>{job.role}</h3>
-                  <p>{job.summary}</p>
+                  <h3>{t(job.role)}</h3>
+                  <p>{t(job.summary)}</p>
                   <div className="tag-row">{job.skills.map((skill) => <span key={skill}>{skill}</span>)}</div>
                   <details className="role-details">
-                    <summary>Full responsibilities <span aria-hidden="true">+</span></summary>
-                    <ul>{job.details.map((detail) => <li key={detail}>{detail}</li>)}</ul>
+                    <summary>{copy.fullResponsibilities} <span aria-hidden="true">+</span></summary>
+                    <ul>{job.details.map((detail) => <li key={detail}>{t(detail)}</li>)}</ul>
                   </details>
                 </div>
               </article>
@@ -100,20 +132,16 @@ export default function Portfolio() {
 
         <section id="current-focus" className="section current-focus page-width">
           <div className="section-heading">
-            <div><p className="section-number">02</p><h2>Current focus</h2></div>
-            <p>Certifications and personal projects currently in progress or planned next.</p>
+            <div><p className="section-number">02</p><h2>{copy.currentFocus}</h2></div>
+            <p>{copy.focusDescription}</p>
           </div>
           <div className="focus-grid">
             {data.currentFocus.map((item) => (
               <article className="focus-card" key={item.title}>
-                <span className="focus-status">{item.status}</span>
-                <h3>{item.title}</h3>
-                <p>{item.description}</p>
-                {item.link && (
-                  <a href={item.link} target="_blank" rel="noreferrer">
-                    {item.linkLabel} <span aria-hidden="true">↗</span>
-                  </a>
-                )}
+                <span className="focus-status">{t(item.status)}</span>
+                <h3>{t(item.title)}</h3>
+                <p>{t(item.description)}</p>
+                {item.skills.length > 0 && <div className="tag-row">{item.skills.map((skill) => <span key={skill}>{skill}</span>)}</div>}
               </article>
             ))}
           </div>
@@ -128,19 +156,33 @@ export default function Portfolio() {
               aria-controls="education-details"
               onClick={() => setEducationOpen((open) => !open)}
             >
-              <span className="education-title"><span className="section-number">03</span><span>Education & courses</span></span>
-              <span className="education-action">{educationOpen ? "Close full record" : `Explore 2 degrees + ${data.courses.length} verified courses`} <span aria-hidden="true">{educationOpen ? "−" : "+"}</span></span>
+              <span className="education-title"><span className="section-number">03</span><span>{copy.educationAndCourses}</span></span>
+              <span className="education-action">{educationOpen ? copy.closeFullRecord : copy.exploreEducation(data.courses.length)} <span aria-hidden="true">{educationOpen ? "−" : "+"}</span></span>
             </button>
 
             <div className="degree-grid">
               {data.education.map((item) => (
                 <article className="degree" key={item.degree}>
-                  <div className="degree-meta"><span>{item.period}</span><span>{item.location}</span></div>
-                  <h3>{item.degree}</h3>
+                  <div className="degree-meta"><span>{t(item.period)}</span><span>{t(item.location)}</span></div>
+                  <h3>{t(item.degree)}</h3>
                   <p className="institution">{item.institution}</p>
-                  <p>{item.summary}</p>
-                  <p className="thesis"><strong>Thesis:</strong> {item.thesis}</p>
-                  {item.link && <a href={item.link} target="_blank" rel="noreferrer">View repository <span aria-hidden="true">↗</span></a>}
+                  <p>{t(item.summary)}</p>
+                  <p className="thesis"><strong>{copy.thesis}</strong> {t(item.thesis)}</p>
+                  {item.link && <a href={item.link} target="_blank" rel="noreferrer">{copy.viewRepository} <span aria-hidden="true">↗</span></a>}
+                  <details className="degree-details">
+                    <summary>{copy.moreAboutDegree} <span aria-hidden="true">+</span></summary>
+                    <div className="degree-details-content">
+                      <div className="degree-area-list">
+                        {item.areas.map((area) => (
+                          <section className="degree-area" key={area.title}>
+                            <h4>{t(area.title)}</h4>
+                            <p>{t(area.description)}</p>
+                          </section>
+                        ))}
+                      </div>
+                      <div className="tag-row">{item.skills.map((skill) => <span key={skill}>{skill}</span>)}</div>
+                    </div>
+                  </details>
                 </article>
               ))}
             </div>
@@ -148,19 +190,19 @@ export default function Portfolio() {
             <div id="education-details" className="education-details" hidden={!educationOpen}>
               <div className="learning-intro">
                 <div>
-                  <p className="eyebrow">Continuous learning</p>
-                  <h2>Every course, not just a selection.</h2>
+                  <p className="eyebrow">{copy.continuousLearning}</p>
+                  <h2>{copy.learningHeading}</h2>
                 </div>
-                <p>The portfolio keeps the initial view concise, while preserving the complete learning record and the original certificate for verification.</p>
+                <p>{copy.learningDescription}</p>
               </div>
 
               <div className="featured-learning">
-                {data.courses.filter((course) => course.featured).map((course) => (
+                {featuredCourses.map((course) => (
                   <a className="featured-course" href={publicAsset(course.certificate)} target="_blank" rel="noreferrer" key={course.title}>
                     <span>{course.provider}</span>
                     <strong>{course.title}</strong>
                     <small>{course.date}{course.duration ? ` · ${course.duration}` : ""}</small>
-                    <b>View certificate ↗</b>
+                    <b>{copy.viewCertificate} ↗</b>
                   </a>
                 ))}
               </div>
@@ -170,13 +212,13 @@ export default function Portfolio() {
                   const courses = data.courses.filter((course) => course.category === category);
                   return (
                     <section className="course-group" key={category}>
-                      <div className="course-group-heading"><h3>{category}</h3><span>{courses.length} courses</span></div>
+                      <div className="course-group-heading"><h3>{t(category)}</h3><span>{copy.courseCount(courses.length)}</span></div>
                       <div className="course-list">
                         {courses.map((course) => (
                           <a href={publicAsset(course.certificate)} target="_blank" rel="noreferrer" className="course-row" key={course.title}>
                             <span className="course-title">{course.title}</span>
                             <span>{course.provider}</span>
-                            <span>{course.duration ?? "Certificate"}</span>
+                            <span>{course.duration ?? copy.certificate}</span>
                             <span>{course.date}</span>
                             <span aria-hidden="true">↗</span>
                           </a>
@@ -192,22 +234,21 @@ export default function Portfolio() {
 
         <section id="projects" className="section page-width">
           <div className="section-heading">
-            <div><p className="section-number">04</p><h2>Selected projects</h2></div>
-            <p>Selected work in Generative AI, recommendation systems, statistical computing and mathematical modelling.</p>
+            <div><p className="section-number">04</p><h2>{copy.selectedProjects}</h2></div>
+            <p>{copy.projectsDescription}</p>
           </div>
           <div className="project-grid">
             {data.projects.map((project, index) => (
               <article className="project" key={project.title}>
                 <div className="project-index">0{index + 1}</div>
-                <p className="project-context">{project.context}</p>
-                <h3>{project.title}</h3>
-                <p>{project.description}</p>
-                {project.note && <p className="project-note">{project.note}</p>}
+                <p className="project-context">{t(project.context)}</p>
+                <h3>{t(project.title)}</h3>
+                <p>{t(project.description)}</p>
                 <div className="tag-row">{project.skills.map((skill) => <span key={skill}>{skill}</span>)}</div>
                 {project.reports?.map((report) => (
-                  <a href={report.url} target="_blank" rel="noreferrer" key={report.url}>{report.label} <span aria-hidden="true">↗</span></a>
+                  <a href={report.url} target="_blank" rel="noreferrer" key={report.url}>{t(report.label)} <span aria-hidden="true">↗</span></a>
                 ))}
-                {project.link && <a href={project.link} target="_blank" rel="noreferrer">View repository <span aria-hidden="true">↗</span></a>}
+                {project.link && <a href={project.link} target="_blank" rel="noreferrer">{copy.viewRepository} <span aria-hidden="true">↗</span></a>}
               </article>
             ))}
           </div>
@@ -216,29 +257,50 @@ export default function Portfolio() {
         <section className="skills-section">
           <div className="page-width">
             <div className="section-heading">
-              <div><p className="section-number">05</p><h2>Technical profile</h2></div>
-              <p>Tools and methods used across professional experience, academic projects and continuous learning.</p>
+              <div><p className="section-number">05</p><h2>{copy.technicalProfile}</h2></div>
+              <p>{copy.technicalDescription}</p>
             </div>
             <div className="skills-grid">
               {data.skillGroups.map((group) => (
-                <article key={group.title}><h3>{group.title}</h3><ul>{group.items.map((item) => <li key={item}>{item}</li>)}</ul></article>
+                <article key={group.title}><h3>{t(group.title)}</h3><ul>{group.items.map((item) => <li key={item}>{item}</li>)}</ul></article>
               ))}
             </div>
             <div className="languages">
-              <h3>Languages</h3>
-              {data.languages.map((item) => <div key={item.language}><span>{item.language}</span><strong>{item.level}</strong></div>)}
+              <h3>{copy.languages}</h3>
+              {data.languages.map((item) => <div key={item.language}><span>{t(item.language)}</span><strong>{t(item.level)}</strong></div>)}
             </div>
+          </div>
+        </section>
+
+        <section id="other-activities" className="section beyond-work page-width">
+          <div className="section-heading">
+            <div><p className="section-number">06</p><h2>{copy.otherActivities}</h2></div>
+            <p>{copy.activitiesDescription}</p>
+          </div>
+          <div className="activity-list">
+            {data.additionalActivities.map((activity) => (
+              <article className="activity-card" key={activity.title}>
+                <div className="activity-meta">
+                  <p>{t(activity.organisation)}</p>
+                  <time>{t(activity.period)}</time>
+                </div>
+                <div>
+                  <h3>{t(activity.title)}</h3>
+                  <p>{t(activity.description)}</p>
+                </div>
+              </article>
+            ))}
           </div>
         </section>
 
         <section id="contact" className="contact-section page-width">
           <div>
-            <p className="eyebrow">Contact</p>
-            <h2>Get in touch</h2>
-            <p>For professional enquiries, collaborations or questions about the projects presented here, contact me by email or LinkedIn.</p>
+            <p className="eyebrow">{copy.contact}</p>
+            <h2>{copy.getInTouch}</h2>
+            <p>{copy.contactDescription}</p>
           </div>
           <div className="contact-actions">
-            <a className="button contact-button" href={`mailto:${data.profile.email}`}>Email <span aria-hidden="true">↗</span></a>
+            <a className="button contact-button" href={`mailto:${data.profile.email}`}>{copy.email} <span aria-hidden="true">↗</span></a>
             <a className="button contact-linkedin" href={data.profile.linkedin} target="_blank" rel="noreferrer">LinkedIn <span aria-hidden="true">↗</span></a>
           </div>
         </section>

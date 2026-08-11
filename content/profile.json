@@ -1,10 +1,9 @@
 {
   "profile": {
     "name": "Álvaro Barragán Codesal",
-    "role": "AI & Data Professional",
     "location": "Madrid, Spain",
-    "positioning": "AI & Data Consultant · Madrid, Spain",
-    "summary": "Early-career AI and Data professional with hands-on experience in Python, Machine Learning, NLP, LLMs, RAG systems and process automation. I build practical solutions that connect technical depth with real business needs.",
+    "positioning": "Data & AI Consultant · Madrid, Spain",
+    "summary": "Early-career AI and Data professional with hands-on experience in Python, Machine Learning, NLP, LLMs, RAG systems and process automation. Alongside project delivery, I follow a structured learning path in cloud AI, MLOps and production ML to keep expanding the depth and scope of the systems I can build.",
     "email": "alvaro24barragan@gmail.com",
     "linkedin": "https://linkedin.com/in/barragan-alvaro",
     "github": "https://github.com/alvaro24barragan"
@@ -20,20 +19,19 @@
       "status": "In progress",
       "title": "AWS Certified AI Practitioner",
       "description": "Establishing a verified AWS foundation for AI engineering before progressing to the AWS Certified Machine Learning Engineer - Associate certification.",
-      "link": "https://aws.amazon.com/certification/certified-ai-practitioner/",
-      "linkLabel": "Certification details"
+      "skills": []
     },
     {
       "status": "Next",
       "title": "AWS Certified Machine Learning Engineer - Associate",
       "description": "Planned after the AI Practitioner, with a focus on implementing and operationalising production ML workloads on AWS.",
-      "link": "https://aws.amazon.com/certification/certified-machine-learning-engineer-associate/",
-      "linkLabel": "Certification details"
+      "skills": []
     },
     {
       "status": "Active project",
-      "title": "Language Tutor",
-      "description": "Current personal project focused on developing a digital language tutor. More technical details will be added as the project progresses."
+      "title": "Adaptive AI Language Tutor",
+      "description": "Developing an adaptive language-learning system that combines learner modelling, spaced repetition, recommendation algorithms and LLM-based tutoring to personalise vocabulary, grammar, exercises and conversations according to each user's knowledge and progress.",
+      "skills": ["Python", "LLMs", "NLP", "Recommendation Systems", "Knowledge Tracing", "LangGraph"]
     }
   ],
   "experience": [
@@ -53,7 +51,7 @@
     },
     {
       "company": "SEGULA Technologies",
-      "role": "AI & Data Science Intern",
+      "role": "AI Intern",
       "location": "Madrid, Spain",
       "period": "Apr 2025 - May 2025",
       "summary": "Document analysis, AI agents, unstructured information processing and automation use cases.",
@@ -85,33 +83,66 @@
       "degree": "Master's Degree in Artificial Intelligence",
       "period": "Sep 2024 - Sep 2025",
       "location": "Madrid, Spain",
-      "summary": "Machine Learning, Deep Learning, NLP, Time Series and Recommendation Systems.",
-      "thesis": "AI-based recommendation system for personalised hypertrophy training."
+      "summary": "Applied programme spanning end-to-end Machine Learning, Deep Learning, structured and unstructured data, trustworthy AI and operational adoption.",
+      "thesis": "AI-based recommendation system for personalised hypertrophy training.",
+      "areas": [
+        {
+          "title": "Modelling and experimentation",
+          "description": "End-to-end workflows covering data preparation, feature engineering, supervised and unsupervised learning, model comparison, validation and metric selection."
+        },
+        {
+          "title": "Deep learning and unstructured data",
+          "description": "Neural networks, CNNs, RNN/LSTMs, NLP and transformer pipelines applied to image, text and sequential-data problems."
+        },
+        {
+          "title": "Forecasting and recommendation",
+          "description": "Statistical and neural approaches to time-series analysis, together with recommendation strategies and user-oriented decision systems."
+        },
+        {
+          "title": "Trustworthy and operational AI",
+          "description": "Model calibration, explainability with SHAP, class imbalance, bias and stability, complemented by data governance, ethics, regulation, MLOps and business adoption."
+        },
+        {
+          "title": "Applied work",
+          "description": "Practical work included classification and clustering studies, LSTM-based forecasting, credit-default model comparison with SHAP, and a hybrid recommendation system developed as the master's thesis."
+        }
+      ],
+      "skills": ["Python", "scikit-learn", "TensorFlow", "Machine Learning", "Deep Learning", "NLP", "Time Series", "Recommendation Systems", "SHAP", "Model Evaluation", "MLOps", "Data Governance"]
     },
     {
       "institution": "Universidad de Alcalá",
       "degree": "Bachelor's Degree in Computer Engineering",
       "period": "Sep 2019 - Jun 2025",
       "location": "Madrid, Spain",
-      "summary": "Algorithms, Statistics, Databases, Artificial Intelligence, Data Science and Computer Vision.",
+      "summary": "Broad computer-engineering training across software development, data, intelligent systems, computer architecture, networks and connected products.",
       "thesis": "CRAN package for statistical automation and advanced basketball analytics.",
+      "areas": [
+        {
+          "title": "Software engineering and development",
+          "description": "Programming foundations and advanced paradigms, algorithms and data structures, software architecture, requirements, testing and project delivery across different application environments."
+        },
+        {
+          "title": "Computer systems and connectivity",
+          "description": "Computer architecture, operating systems, network design and ubiquitous computing, providing the foundation to understand how software interacts with infrastructure and connected devices."
+        },
+        {
+          "title": "Data and intelligent systems",
+          "description": "Relational and advanced databases, statistics, data science, automated reasoning, planning and Artificial Intelligence, from data modelling to decision-oriented systems."
+        },
+        {
+          "title": "Perception, control and multimedia",
+          "description": "Computer Vision, robotics and intelligent control, complemented by audiovisual and multimedia systems for working with physical and visual information."
+        },
+        {
+          "title": "Applied work",
+          "description": "Academic work ranged from mathematical modelling and a full-stack IoT security system to statistical computing in R, package development and advanced basketball analytics through the bachelor's thesis."
+        }
+      ],
+      "skills": ["Software Engineering", "Algorithms", "SQL", "Advanced Databases", "Statistics", "Computer Vision", "IoT", "Java", "R"],
       "link": "https://github.com/alvaro24barragan/AdvancedBasketballStats"
     }
   ],
   "projects": [
-    {
-      "title": "RAG Document Assistant",
-      "context": "Inetum - Internal project",
-      "description": "Architecture design for a RAG-based virtual assistant combining Azure OpenAI, relational data retrieval and contextual response generation.",
-      "skills": ["Azure OpenAI", "RAG", "LLMs", "Python", "SQL"],
-      "note": "The code is confidential; the architecture, technical approach and learnings can be discussed."
-    },
-    {
-      "title": "Personalised Hypertrophy Training",
-      "context": "Master's thesis",
-      "description": "AI-based recommendation system designed to personalise hypertrophy training using user and training data.",
-      "skills": ["Machine Learning", "Recommendation systems", "Personalisation", "Data analysis"]
-    },
     {
       "title": "AdvancedBasketballStats",
       "context": "Bachelor's thesis",
@@ -120,11 +151,22 @@
       "link": "https://github.com/alvaro24barragan/AdvancedBasketballStats"
     },
     {
+      "title": "Personalised Hypertrophy Training",
+      "context": "Master's thesis",
+      "description": "Hybrid training-planning assistant combining domain rules, user profiling, exercise-similarity scoring, feedback-driven progression and LLM-supported recommendations.",
+      "skills": ["Python", "Recommendation systems", "Rule-based systems", "LLM integration", "User modelling"]
+    },
+    {
+      "title": "RAG Document Assistant",
+      "context": "Inetum - Internal project",
+      "description": "Architecture design for a RAG-based virtual assistant combining Azure OpenAI, relational data retrieval and contextual response generation.",
+      "skills": ["Azure OpenAI", "RAG", "LLMs", "Python", "SQL"]
+    },
+    {
       "title": "Mathematical Modelling Competitions",
       "context": "Instituto de Matemática Interdisciplinar · UCM",
       "description": "Two reports from the IV and V editions: network design using graph theory and minimum spanning trees, followed by an analysis of fairness in the UEFA Champions League draw using probability, Machine Learning and optimisation.",
       "skills": ["Graph theory", "Minimum Spanning Trees", "Probability", "Machine Learning", "Optimisation"],
-      "link": "https://github.com/alvaro24barragan/cmm-mathematical-modelling-competition",
       "reports": [
         {
           "label": "IV Edition · Network optimisation",
@@ -135,6 +177,12 @@
           "url": "https://github.com/alvaro24barragan/cmm-mathematical-modelling-competition/blob/main/CMM_IMI_2022_report.pdf"
         }
       ]
+    },
+    {
+      "title": "SecurIA",
+      "context": "University team project · Universidad de Alcalá",
+      "description": "Computer Vision-enabled end-to-end IoT home-security prototype using OpenCV and MediaPipe for real-time face and hand detection, integrated with ESP32 sensors, MQTT messaging, a Java/Tomcat backend, PostgreSQL, and Android and web clients.",
+      "skills": ["SQL", "Computer Vision", "OpenCV", "MediaPipe", "PostgreSQL", "MQTT", "IoT", "ESP32", "Java", "Tomcat", "Web development", "Android"]
     }
   ],
   "skillGroups": [
@@ -148,11 +196,19 @@
     { "language": "English", "level": "C1" },
     { "language": "German", "level": "A2" }
   ],
+  "additionalActivities": [
+    {
+      "title": "Federated Basketball Player",
+      "organisation": "Madrid Basketball Federation (FBM)",
+      "period": "2010 - Present",
+      "description": "Competing with CVA Team, including two FBM finals: Cadet in 2017 and U-22 in 2023. The experience has strengthened discipline, resilience, accountability, teamwork and the ability to perform under pressure."
+    }
+  ],
   "courses": [
-    { "title": "Fundamentals of Machine Learning and Artificial Intelligence", "provider": "AWS Training & Certification", "date": "Jul 30, 2026", "category": "AI foundations", "certificate": "/certificates/aws-fundamentals-ml-ai.pdf", "featured": true },
+    { "title": "Fundamentals of Machine Learning and Artificial Intelligence", "provider": "AWS Training & Certification", "date": "Jul 30, 2026", "category": "AI foundations", "certificate": "/certificates/aws-fundamentals-ml-ai.pdf" },
     { "title": "Introduction to MLflow", "provider": "DataCamp", "date": "Oct 15, 2025", "duration": "4 hrs", "category": "ML & MLOps", "certificate": "/certificates/introduction-to-mlflow.pdf", "featured": true },
-    { "title": "Monitoring Machine Learning Concepts", "provider": "DataCamp", "date": "Oct 16, 2025", "duration": "2 hrs", "category": "ML & MLOps", "certificate": "/certificates/monitoring-machine-learning-concepts.pdf" },
-    { "title": "MLOps Concepts", "provider": "DataCamp", "date": "Oct 11, 2025", "duration": "2 hrs", "category": "ML & MLOps", "certificate": "/certificates/mlops-concepts.pdf" },
+    { "title": "Monitoring Machine Learning Concepts", "provider": "DataCamp", "date": "Oct 16, 2025", "duration": "2 hrs", "category": "ML & MLOps", "certificate": "/certificates/monitoring-machine-learning-concepts.pdf", "featured": true },
+    { "title": "MLOps Concepts", "provider": "DataCamp", "date": "Oct 11, 2025", "duration": "2 hrs", "category": "ML & MLOps", "certificate": "/certificates/mlops-concepts.pdf", "featured": true },
     { "title": "Designing Agentic Systems with LangChain", "provider": "DataCamp", "date": "Feb 23, 2025", "duration": "3 hrs", "category": "GenAI & deep learning", "certificate": "/certificates/designing-agentic-systems-with-langchain.pdf", "featured": true },
     { "title": "Transformer Models with PyTorch", "provider": "DataCamp", "date": "Feb 23, 2025", "duration": "2 hrs", "category": "GenAI & deep learning", "certificate": "/certificates/transformer-models-with-pytorch.pdf", "featured": true },
     { "title": "Introduction to Deep Learning with PyTorch", "provider": "DataCamp", "date": "Feb 23, 2025", "duration": "4 hrs", "category": "GenAI & deep learning", "certificate": "/certificates/introduction-to-deep-learning-with-pytorch.pdf" },
@@ -174,6 +230,6 @@
     { "title": "Unsupervised Learning in Python", "provider": "DataCamp", "date": "Jun 5, 2023", "duration": "4 hrs", "category": "ML & MLOps", "certificate": "/certificates/unsupervised-learning-in-python.pdf" },
     { "title": "Supervised Learning with scikit-learn", "provider": "DataCamp", "date": "Jun 3, 2023", "duration": "4 hrs", "category": "ML & MLOps", "certificate": "/certificates/supervised-learning-with-scikit-learn.pdf" },
     { "title": "Introduction to Python", "provider": "DataCamp", "date": "Jun 3, 2023", "duration": "4 hrs", "category": "Python & data", "certificate": "/certificates/introduction-to-python.pdf" },
-    { "title": "Elements of AI", "provider": "University of Helsinki & MinnaLearn", "date": "Jun 1, 2023", "duration": "2 ECTS", "category": "AI foundations", "certificate": "/certificates/elements-of-ai.png", "featured": true }
+    { "title": "Elements of AI", "provider": "University of Helsinki & MinnaLearn", "date": "Jun 1, 2023", "duration": "2 ECTS", "category": "AI foundations", "certificate": "/certificates/elements-of-ai.png" }
   ]
 }
