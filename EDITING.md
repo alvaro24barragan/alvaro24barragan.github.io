@@ -49,6 +49,16 @@ Categorías existentes:
 
 Si `featured` es `true`, el curso aparecerá también entre los certificados destacados.
 
+La página mantiene seis cursos destacados. Utiliza `featured: true` únicamente en la formación más relevante o avanzada; el resto seguirá apareciendo en el historial completo.
+
+## Editar los idiomas
+
+El contenido original se mantiene en inglés dentro de `content/profile.json`. Las traducciones de los textos profesionales y de la interfaz están en:
+
+`app/i18n.ts`
+
+La página utiliza inglés por defecto y permite cambiar a español o alemán desde la cabecera. Si se modifica una descripción profesional en inglés, también debe actualizarse su traducción en este archivo.
+
 ## Actualizar Current focus
 
 La sección `Current focus` se gestiona desde la lista `currentFocus`. Cada elemento puede incluir:
@@ -64,6 +74,19 @@ La sección `Current focus` se gestiona desde la lista `currentFocus`. Cada elem
 ```
 
 Para añadir un nuevo objetivo, duplica uno de los elementos existentes. Si todavía no tiene una página pública, elimina `link` y `linkLabel`.
+
+## Añadir una actividad personal
+
+La sección `Other activities` se gestiona desde la lista `additionalActivities`:
+
+```json
+{
+  "title": "Nombre de la actividad",
+  "organisation": "Organización",
+  "period": "2010 - Present",
+  "description": "Descripción breve y concreta."
+}
+```
 
 ## Publicar un cambio
 
