@@ -18,14 +18,16 @@
     {
       "status": "In progress",
       "title": "AWS Certified AI Practitioner",
-      "description": "Establishing a verified AWS foundation for AI engineering before progressing to the AWS Certified Machine Learning Engineer - Associate certification.",
-      "skills": []
+      "description": "Formalising and validating my ability to translate existing AI, Machine Learning and Generative AI knowledge into appropriate solutions within the AWS ecosystem.",
+      "competencyLabel": "Capabilities being validated",
+      "skills": ["AWS AI/ML services", "Generative AI on AWS", "Foundation model applications", "Responsible AI", "AI security, governance & compliance"]
     },
     {
       "status": "Next",
-      "title": "AWS Certified Machine Learning Engineer - Associate",
-      "description": "Planned after the AI Practitioner, with a focus on implementing and operationalising production ML workloads on AWS.",
-      "skills": []
+      "title": "AWS Certified Machine Learning Engineer – Associate (MLA-C02)",
+      "description": "Planned next step to validate the implementation and operation of production-grade Machine Learning and Generative AI solutions on AWS.",
+      "competencyLabel": "Planned validation scope",
+      "skills": ["Amazon SageMaker AI & Bedrock", "ML & GenAI deployment", "RAG & LLMOps", "Agentic AI workflows", "Monitoring & MLOps", "Responsible AI"]
     },
     {
       "status": "Active project",
@@ -114,31 +116,35 @@
       "degree": "Bachelor's Degree in Computer Engineering",
       "period": "Sep 2019 - Jun 2025",
       "location": "Madrid, Spain",
-      "summary": "Broad computer-engineering training across software development, data, intelligent systems, computer architecture, networks and connected products.",
+      "summary": "Computer Engineering foundation combining software construction, data systems, intelligent computing and infrastructure, supported by projects that connect algorithms with working systems.",
       "thesis": "CRAN package for statistical automation and advanced basketball analytics.",
       "areas": [
         {
-          "title": "Software engineering and development",
-          "description": "Programming foundations and advanced paradigms, algorithms and data structures, software architecture, requirements, testing and project delivery across different application environments."
+          "title": "Software construction and engineering",
+          "description": "Designed and implemented software through object-oriented and advanced programming, algorithms and data structures, requirements analysis, architecture, testing and project delivery—building the ability to move from a problem statement to maintainable applications."
         },
         {
-          "title": "Computer systems and connectivity",
-          "description": "Computer architecture, operating systems, network design and ubiquitous computing, providing the foundation to understand how software interacts with infrastructure and connected devices."
+          "title": "Data architecture and analytical computing",
+          "description": "Worked with relational and advanced databases, data modelling, SQL, statistics and data-oriented programming, covering the path from structured storage and queries to analysis and decision support."
         },
         {
-          "title": "Data and intelligent systems",
-          "description": "Relational and advanced databases, statistics, data science, automated reasoning, planning and Artificial Intelligence, from data modelling to decision-oriented systems."
+          "title": "Artificial Intelligence and computational problem-solving",
+          "description": "Developed foundations in search, knowledge representation, automated reasoning and planning, together with Machine Learning and mathematical modelling for problems that require prediction, optimisation or structured decision-making."
         },
         {
-          "title": "Perception, control and multimedia",
-          "description": "Computer Vision, robotics and intelligent control, complemented by audiovisual and multimedia systems for working with physical and visual information."
+          "title": "Systems, networks and connected computing",
+          "description": "Studied computer architecture, operating systems and network design, then applied that systems perspective to ubiquitous computing and IoT solutions spanning sensors, messaging, backend services, databases and client applications."
         },
         {
-          "title": "Applied work",
-          "description": "Academic work ranged from mathematical modelling and a full-stack IoT security system to statistical computing in R, package development and advanced basketball analytics through the bachelor's thesis."
+          "title": "Perception and intelligent control",
+          "description": "Applied Computer Vision, robotics and intelligent control to physical and visual information, connecting perception algorithms with the software and hardware environments in which they operate."
+        },
+        {
+          "title": "Evidence through complete projects",
+          "description": "Turned this breadth into inspectable work: mathematical-modelling reports, the SecurIA multi-component IoT security prototype and a bachelor's thesis extending a CRAN package for statistical automation and basketball analytics."
         }
       ],
-      "skills": ["Software Engineering", "Algorithms", "SQL", "Advanced Databases", "Statistics", "Computer Vision", "IoT", "Java", "R"],
+      "skills": ["Software Engineering", "Algorithms & Data Structures", "Database Design", "SQL", "Statistics", "Artificial Intelligence", "Computer Vision", "Operating Systems", "Computer Networks", "IoT", "Java", "R"],
       "link": "https://github.com/alvaro24barragan/AdvancedBasketballStats"
     }
   ],
@@ -182,14 +188,15 @@
       "title": "SecurIA",
       "context": "University team project · Universidad de Alcalá",
       "description": "Computer Vision-enabled end-to-end IoT home-security prototype using OpenCV and MediaPipe for real-time face and hand detection, integrated with ESP32 sensors, MQTT messaging, a Java/Tomcat backend, PostgreSQL, and Android and web clients.",
-      "skills": ["SQL", "Computer Vision", "OpenCV", "MediaPipe", "PostgreSQL", "MQTT", "IoT", "ESP32", "Java", "Tomcat", "Web development", "Android"]
+      "skills": ["SQL", "Computer Vision", "OpenCV", "MediaPipe", "PostgreSQL", "MQTT", "IoT", "ESP32", "Java", "Tomcat", "Web development", "Android"],
+      "link": "https://github.com/alvaro24barragan/securia-iot-home-security"
     }
   ],
   "skillGroups": [
-    { "title": "Programming & Data", "items": ["Python", "SQL", "PySpark", "Pandas", "NumPy", "R"] },
-    { "title": "AI & Machine Learning", "items": ["Machine Learning", "Deep Learning", "NLP", "LLMs", "RAG", "AI agents", "Recommendation systems", "Time series"] },
-    { "title": "Frameworks & Tools", "items": ["scikit-learn", "PyTorch", "LangChain", "LangGraph", "Hugging Face", "MLflow", "Git", "Microsoft Copilot"] },
-    { "title": "Cloud & Delivery", "items": ["Azure OpenAI", "AWS fundamentals", "ETL pipelines", "APIs", "Model evaluation", "Process automation"] }
+    { "title": "Programming & Data", "items": ["Python", "SQL", "PostgreSQL", "Data Modelling", "PySpark", "Pandas", "NumPy", "R", "Data Visualisation"] },
+    { "title": "Machine Learning & Analytics", "items": ["Machine Learning", "Deep Learning", "Computer Vision", "Explainable AI / SHAP", "Feature Engineering", "NLP", "Recommendation systems", "Time series", "scikit-learn", "PyTorch", "OpenCV"] },
+    { "title": "GenAI & Retrieval", "items": ["LLMs", "RAG", "AI agents", "Information Retrieval", "Semantic Search", "Embeddings", "Vector Search", "Prompt Engineering", "LangChain", "LangGraph", "Hugging Face Hub & Inference API"] },
+    { "title": "Cloud, Tools & Delivery", "items": ["Azure OpenAI", "AWS fundamentals", "ETL pipelines", "API Integration", "MLflow", "Model evaluation", "Process automation", "Git", "Microsoft Copilot"] }
   ],
   "languages": [
     { "language": "Spanish", "level": "Native" },
