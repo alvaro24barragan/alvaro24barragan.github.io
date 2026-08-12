@@ -181,16 +181,9 @@ export default function Portfolio() {
 
         <section id="education" className={`education-section ${educationOpen ? "is-open" : ""}`}>
           <div className="page-width">
-            <button
-              className="education-toggle"
-              type="button"
-              aria-expanded={educationOpen}
-              aria-controls="education-details"
-              onClick={() => setEducationOpen((open) => !open)}
-            >
+            <div className="education-heading">
               <span className="education-title"><span className="section-number">03</span><span>{copy.educationAndCourses}</span></span>
-              <span className="education-action">{educationOpen ? copy.closeFullRecord : copy.exploreEducation(data.courses.length)} <span aria-hidden="true">{educationOpen ? "−" : "+"}</span></span>
-            </button>
+            </div>
 
             <div className="degree-grid">
               {data.education.map((item) => (
@@ -218,6 +211,17 @@ export default function Portfolio() {
                 </article>
               ))}
             </div>
+
+            <button
+              className="courses-toggle"
+              type="button"
+              aria-expanded={educationOpen}
+              aria-controls="education-details"
+              onClick={() => setEducationOpen((open) => !open)}
+            >
+              <span>{educationOpen ? copy.hideCourses : copy.viewAllCourses(data.courses.length)}</span>
+              <span aria-hidden="true">{educationOpen ? "−" : "+"}</span>
+            </button>
 
             <div id="education-details" className="education-details" hidden={!educationOpen}>
               <div className="learning-intro">
