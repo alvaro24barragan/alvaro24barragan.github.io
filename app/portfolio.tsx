@@ -282,7 +282,7 @@ export default function Portfolio() {
                     <span className="record-label">{copy.approach}</span>
                     <p>{t(project.description)}</p>
                   </div>
-                  {project.title !== "RAG Document Assistant" && (
+                  {(project.link || project.reports?.length) && (
                     <div className="record-block record-evidence">
                       <span className="record-label">{copy.evidence}</span>
                       <div className="evidence-links">
@@ -290,7 +290,6 @@ export default function Portfolio() {
                           <a href={report.url} target="_blank" rel="noreferrer" key={report.url}>{t(report.label)} <span aria-hidden="true">↗</span></a>
                         ))}
                         {project.link && <a href={project.link} target="_blank" rel="noreferrer">{copy.viewRepository} <span aria-hidden="true">↗</span></a>}
-                        {!project.link && !project.reports?.length && <span>{copy.methodArchitecture}</span>}
                       </div>
                     </div>
                   )}
@@ -314,7 +313,14 @@ export default function Portfolio() {
               {data.skillGroups.map((group) => (
                 <article key={group.title}>
                   <h3>{t(group.title)}</h3>
-                  <ul>{group.items.map((item) => <li key={item}>{item}</li>)}</ul>
+                  <div className="skill-subgroup">
+                    <p className="skill-subgroup-label">{copy.capabilities}</p>
+                    <ul>{group.capabilities.map((item) => <li key={item}>{item}</li>)}</ul>
+                  </div>
+                  <div className="skill-subgroup">
+                    <p className="skill-subgroup-label">{copy.toolsAndPlatforms}</p>
+                    <ul>{group.tools.map((item) => <li key={item}>{item}</li>)}</ul>
+                  </div>
                 </article>
               ))}
             </div>

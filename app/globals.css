@@ -324,6 +324,9 @@ a:focus-visible, button:focus-visible { outline: 3px solid var(--accent-2); outl
 .skills-grid { display: grid; grid-template-columns: repeat(4, 1fr); border-top: 1px solid var(--line); border-left: 1px solid var(--line); }
 .skills-grid article { min-width: 0; padding: 22px; background: var(--surface); border-right: 1px solid var(--line); border-bottom: 1px solid var(--line); }
 .skills-grid h3 { min-height: 52px; margin: 0 0 16px; color: var(--text); font-size: 1.08rem; line-height: 1.25; }
+html:not([data-theme="dark"]) .skills-grid h3 { font-weight: 800; }
+.skill-subgroup + .skill-subgroup { margin-top: 20px; }
+.skill-subgroup-label { margin: 0 0 5px; color: var(--accent); font-family: var(--mono); font-size: 0.62rem; font-weight: 850; letter-spacing: 0.08em; text-transform: uppercase; }
 .skills-grid ul { margin: 0; padding: 0; list-style: none; color: var(--muted); }
 .skills-grid li { padding: 7px 0; border-top: 1px solid var(--line); font-size: 0.88rem; }
 .languages { display: grid; grid-template-columns: 1fr repeat(3, 0.55fr); gap: 16px; align-items: center; margin-top: 14px; padding: 22px; background: var(--surface); border: 1px solid var(--line); }

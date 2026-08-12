@@ -193,10 +193,26 @@
     }
   ],
   "skillGroups": [
-    { "title": "Programming & Data", "items": ["Python", "SQL", "PostgreSQL", "Data Modelling", "PySpark", "Pandas", "NumPy", "R", "Data Visualisation"] },
-    { "title": "Machine Learning & Analytics", "items": ["Machine Learning", "Deep Learning", "Computer Vision", "Explainable AI / SHAP", "Feature Engineering", "NLP", "Recommendation systems", "Time series", "scikit-learn", "PyTorch", "OpenCV"] },
-    { "title": "GenAI & Retrieval", "items": ["LLMs", "RAG", "AI agents", "Information Retrieval", "Semantic Search", "Embeddings", "Vector Search", "Prompt Engineering", "LangChain", "LangGraph", "Hugging Face Hub & Inference API"] },
-    { "title": "Cloud, Tools & Delivery", "items": ["Azure OpenAI", "AWS fundamentals", "ETL pipelines", "API Integration", "MLflow", "Model evaluation", "Process automation", "Git", "Microsoft Copilot"] }
+    {
+      "title": "GenAI & Retrieval",
+      "capabilities": ["LLMs", "RAG", "AI agents", "Information Retrieval", "Semantic Search", "Embeddings", "Vector Search", "Prompt Engineering"],
+      "tools": ["LangChain", "LangGraph", "Hugging Face Hub & Inference API", "Azure OpenAI"]
+    },
+    {
+      "title": "Machine Learning & Applied AI",
+      "capabilities": ["Machine Learning", "Deep Learning", "NLP", "Computer Vision", "Recommendation systems", "Time series", "Feature Engineering", "Explainable AI / SHAP", "Model evaluation"],
+      "tools": ["scikit-learn", "PyTorch", "OpenCV"]
+    },
+    {
+      "title": "Data & Software Engineering",
+      "capabilities": ["Data Modelling", "ETL pipelines", "API Integration", "Data Visualisation"],
+      "tools": ["Python", "SQL", "PostgreSQL", "PySpark", "Pandas", "NumPy", "R"]
+    },
+    {
+      "title": "Cloud, MLOps & Automation",
+      "capabilities": ["MLOps", "Model monitoring", "Process automation"],
+      "tools": ["AWS fundamentals", "MLflow", "Git", "Microsoft Copilot"]
+    }
   ],
   "languages": [
     { "language": "Spanish", "level": "Native" },
