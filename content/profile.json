@@ -2,14 +2,14 @@
   "profile": {
     "name": "Álvaro Barragán Codesal",
     "location": "Madrid, Spain",
-    "positioning": "Data & AI Consultant · Madrid, Spain",
-    "summary": "Early-career AI and Data professional with hands-on experience in Python, Machine Learning, NLP, LLMs, RAG systems and process automation. Alongside project delivery, I follow a structured learning path in cloud AI, MLOps and production ML to keep expanding the depth and scope of the systems I can build.",
+    "positioning": "Data Consultant · Madrid, Spain",
+    "summary": "Data Consultant with hands-on experience in Python, Machine Learning, NLP, LLMs, RAG systems and process automation. Alongside project delivery, I follow a structured learning path in cloud AI, MLOps and production ML to keep expanding the depth and scope of the systems I can build.",
     "email": "alvaro24barragan@gmail.com",
     "linkedin": "https://linkedin.com/in/barragan-alvaro",
     "github": "https://github.com/alvaro24barragan"
   },
   "highlights": [
-    { "value": "3", "label": "Professional experiences" },
+    { "value": "3", "label": "Professional roles" },
     { "value": "2", "label": "University degrees" },
     { "value": "26", "label": "Verified courses" },
     { "value": "C1", "label": "English level" }
@@ -18,15 +18,15 @@
     {
       "status": "In progress",
       "title": "AWS Certified AI Practitioner",
-      "description": "Formalising and validating my ability to translate existing AI, Machine Learning and Generative AI knowledge into appropriate solutions within the AWS ecosystem.",
+      "description": "Extending my existing AI, Machine Learning and Generative AI expertise into the AWS ecosystem, with certification preparation focused on selecting and applying the appropriate AWS services.",
       "competencyLabel": "Capabilities being validated",
       "skills": ["AWS AI/ML services", "Generative AI on AWS", "Foundation model applications", "Responsible AI", "AI security, governance & compliance"]
     },
     {
       "status": "Next",
       "title": "AWS Certified Machine Learning Engineer – Associate (MLA-C02)",
-      "description": "Planned next step to validate the implementation and operation of production-grade Machine Learning and Generative AI solutions on AWS.",
-      "competencyLabel": "Planned validation scope",
+      "description": "Planned next step to demonstrate the implementation and operation of production-grade Machine Learning and Generative AI solutions on AWS.",
+      "competencyLabel": "Planned technical scope",
       "skills": ["Amazon SageMaker AI & Bedrock", "ML & GenAI deployment", "RAG & LLMOps", "Agentic AI workflows", "Monitoring & MLOps", "Responsible AI"]
     },
     {
@@ -157,7 +157,7 @@
       "link": "https://github.com/alvaro24barragan/AdvancedBasketballStats"
     },
     {
-      "title": "Personalised Hypertrophy Training",
+      "title": "AI-Assisted Hypertrophy Training Planner",
       "context": "Master's thesis",
       "description": "Hybrid training-planning assistant combining domain rules, user profiling, exercise-similarity scoring, feedback-driven progression and LLM-supported recommendations.",
       "skills": ["Python", "Recommendation systems", "Rule-based systems", "LLM integration", "User modelling"]
