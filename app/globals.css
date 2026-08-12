@@ -261,11 +261,13 @@ a:focus-visible, button:focus-visible { outline: 3px solid var(--accent-2); outl
 .focus-card .focus-competencies .tag-row { margin-top: 10px; }
 
 .education-section { padding-block: 82px; color: var(--text); background: var(--bg-alt); border-block: 1px solid var(--line); scroll-margin-top: 86px; }
-.education-toggle { display: flex; align-items: center; justify-content: space-between; gap: 30px; width: 100%; padding: 0 0 38px; color: inherit; text-align: left; background: transparent; border: 0; border-bottom: 1px solid var(--line); cursor: pointer; }
+.education-heading { padding-bottom: 38px; border-bottom: 1px solid var(--line); }
 .education-title { display: flex; flex-direction: column; }
-.education-action { display: flex; align-items: center; gap: 17px; color: var(--muted); font-family: var(--mono); font-size: 0.76rem; }
-.education-action > span { display: grid; place-items: center; width: 40px; height: 40px; color: #ffffff; background: var(--accent); border-radius: 5px; font-size: 1.25rem; }
 .degree-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 18px; align-items: start; padding-top: 38px; }
+.courses-toggle { display: flex; align-items: center; justify-content: space-between; gap: 24px; width: 100%; margin-top: 18px; padding: 17px 18px 17px 22px; color: var(--text); text-align: left; background: var(--surface); border: 1px solid var(--line); cursor: pointer; font-weight: 760; }
+.courses-toggle:hover { border-color: var(--accent); }
+.courses-toggle > span:first-child { font-family: var(--mono); font-size: 0.76rem; letter-spacing: 0.02em; }
+.courses-toggle > span:last-child { display: grid; flex: 0 0 auto; place-items: center; width: 36px; height: 36px; color: #ffffff; background: var(--accent); border-radius: 5px; font-size: 1.18rem; }
 .degree { padding: 27px; background: var(--surface); border: 1px solid var(--line); box-shadow: var(--card-shadow); }
 .degree-meta { display: flex; justify-content: space-between; gap: 18px; color: var(--subtle); font-family: var(--mono); font-size: 0.72rem; }
 .degree h3 { margin: 34px 0 7px; color: var(--text); font-size: clamp(1.45rem, 2.6vw, 2rem); line-height: 1.12; }
@@ -380,8 +382,6 @@ html:not([data-theme="dark"]) .skills-grid h3 { font-weight: 800; }
   .section { padding-block: 76px; }
   .experience-item { grid-template-columns: 1fr; gap: 20px; }
   .experience-meta time { margin-top: 7px; }
-  .education-toggle { align-items: flex-start; flex-direction: column; }
-  .education-action { justify-content: space-between; width: 100%; }
   .degree-grid, .project-grid, .learning-intro, .featured-learning, .skills-grid { grid-template-columns: 1fr; }
   .education-details { padding-top: 64px; }
   .project { min-height: 0; }
