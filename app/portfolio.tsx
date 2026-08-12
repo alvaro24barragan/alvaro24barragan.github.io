@@ -30,12 +30,27 @@ const publicAsset = (path: string) => `${basePath}${path}`;
 export default function Portfolio() {
   const [educationOpen, setEducationOpen] = useState(false);
   const [language, setLanguage] = useState<Language>("en");
+  const [theme, setTheme] = useState<"light" | "dark">("light");
   const copy = ui[language];
   const t = (value: string) => translateContent(language, value);
 
   useEffect(() => {
     document.documentElement.lang = language;
   }, [language]);
+
+  useEffect(() => {
+    const savedTheme = window.localStorage.getItem("portfolio-theme");
+    const initialTheme = savedTheme === "dark" ? "dark" : "light";
+    setTheme(initialTheme);
+    document.documentElement.dataset.theme = initialTheme;
+  }, []);
+
+  const toggleTheme = () => {
+    const nextTheme = theme === "light" ? "dark" : "light";
+    setTheme(nextTheme);
+    document.documentElement.dataset.theme = nextTheme;
+    window.localStorage.setItem("portfolio-theme", nextTheme);
+  };
 
   const openEducation = () => {
     setEducationOpen(true);
@@ -55,6 +70,16 @@ export default function Portfolio() {
           <a href="#current-focus">{copy.currentFocus}</a>
           <button type="button" onClick={openEducation}>{copy.education}</button>
           <a href="#projects">{copy.projects}</a>
+          <button
+            className="theme-toggle"
+            type="button"
+            onClick={toggleTheme}
+            aria-label={theme === "light" ? copy.enableDarkMode : copy.enableLightMode}
+            title={theme === "light" ? copy.enableDarkMode : copy.enableLightMode}
+          >
+            <span className="theme-symbol" aria-hidden="true">{theme === "light" ? "◐" : "○"}</span>
+            <span>{theme === "light" ? "DARK" : "LIGHT"}</span>
+          </button>
           <div className="language-switcher" role="group" aria-label={copy.languageSelector}>
             {languageOptions.map((option) => (
               <button
@@ -83,8 +108,10 @@ export default function Portfolio() {
               <a className="button button-secondary" href={`mailto:${data.profile.email}`}>{copy.getInTouch} <span aria-hidden="true">↗</span></a>
             </div>
           </div>
-          <aside className="hero-brief" aria-label={copy.professionalSummary}>
-            <h2>{copy.currentProfile}</h2>
+          <aside className="profile-panel" aria-label={copy.professionalSummary}>
+            <div className="profile-panel-heading">
+              <p>{copy.currentProfile}</p>
+            </div>
             <dl>
               <div><dt>{copy.basedIn}</dt><dd>{t(data.profile.location)}</dd></div>
               <div><dt>{copy.currentRole}</dt><dd>{t("Data Consultant")} · NFQ</dd></div>
@@ -172,7 +199,7 @@ export default function Portfolio() {
                   <h3>{t(item.degree)}</h3>
                   <p className="institution">{item.institution}</p>
                   <p>{t(item.summary)}</p>
-                  <p className="thesis"><strong>{copy.thesis}</strong> {t(item.thesis)}</p>
+                  <p className="thesis"><strong>{item.degree === "Master's Degree in Artificial Intelligence" ? copy.mastersThesis : copy.bachelorsThesis}</strong> {t(item.thesis)}</p>
                   {item.link && <a href={item.link} target="_blank" rel="noreferrer">{copy.viewRepository} <span aria-hidden="true">↗</span></a>}
                   <details className="degree-details">
                     <summary>{copy.moreAboutDegree} <span aria-hidden="true">+</span></summary>
@@ -243,17 +270,34 @@ export default function Portfolio() {
             <p>{copy.projectsDescription}</p>
           </div>
           <div className="project-grid">
-            {data.projects.map((project, index) => (
+            {data.projects.map((project) => (
               <article className="project" key={project.title}>
-                <div className="project-index">0{index + 1}</div>
-                <p className="project-context">{t(project.context)}</p>
                 <h3>{t(project.title)}</h3>
-                <p>{t(project.description)}</p>
-                <div className="tag-row">{project.skills.map((skill) => <span key={skill}>{skill}</span>)}</div>
-                {project.reports?.map((report) => (
-                  <a href={report.url} target="_blank" rel="noreferrer" key={report.url}>{t(report.label)} <span aria-hidden="true">↗</span></a>
-                ))}
-                {project.link && <a href={project.link} target="_blank" rel="noreferrer">{copy.viewRepository} <span aria-hidden="true">↗</span></a>}
+                <div className="project-record">
+                  <div className="record-block">
+                    <span className="record-label">{copy.problemContext}</span>
+                    <p>{t(project.context)}</p>
+                  </div>
+                  <div className="record-block record-approach">
+                    <span className="record-label">{copy.approach}</span>
+                    <p>{t(project.description)}</p>
+                  </div>
+                  {(project.link || project.reports?.length) && (
+                    <div className="record-block record-evidence">
+                      <span className="record-label">{copy.evidence}</span>
+                      <div className="evidence-links">
+                        {project.reports?.map((report) => (
+                          <a href={report.url} target="_blank" rel="noreferrer" key={report.url}>{t(report.label)} <span aria-hidden="true">↗</span></a>
+                        ))}
+                        {project.link && <a href={project.link} target="_blank" rel="noreferrer">{copy.viewRepository} <span aria-hidden="true">↗</span></a>}
+                      </div>
+                    </div>
+                  )}
+                  <div className="record-block record-stack">
+                    <span className="record-label">{copy.stack}</span>
+                    <div className="tag-row">{project.skills.map((skill) => <span key={skill}>{skill}</span>)}</div>
+                  </div>
+                </div>
               </article>
             ))}
           </div>
@@ -267,7 +311,17 @@ export default function Portfolio() {
             </div>
             <div className="skills-grid">
               {data.skillGroups.map((group) => (
-                <article key={group.title}><h3>{t(group.title)}</h3><ul>{group.items.map((item) => <li key={item}>{item}</li>)}</ul></article>
+                <article key={group.title}>
+                  <h3>{t(group.title)}</h3>
+                  <div className="skill-subgroup">
+                    <p className="skill-subgroup-label">{copy.capabilities}</p>
+                    <ul>{group.capabilities.map((item) => <li key={item}>{item}</li>)}</ul>
+                  </div>
+                  <div className="skill-subgroup">
+                    <p className="skill-subgroup-label">{copy.toolsAndPlatforms}</p>
+                    <ul>{group.tools.map((item) => <li key={item}>{item}</li>)}</ul>
+                  </div>
+                </article>
               ))}
             </div>
             <div className="languages">

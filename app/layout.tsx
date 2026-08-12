@@ -62,7 +62,7 @@ const structuredProfile = {
   "@type": "Person",
   name: "Álvaro Barragán Codesal",
   url: siteUrl,
-  jobTitle: "Data & AI Consultant",
+  jobTitle: "Data Consultant",
   address: {
     "@type": "PostalAddress",
     addressLocality: "Madrid",
